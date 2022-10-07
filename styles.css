@@ -1,0 +1,170 @@
+:root {
+    --bg-colour: #0a0a25;
+    --white-opacity-10: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--bg-colour);
+}
+
+h1 {
+    color: white;
+}
+
+nav {
+    display: flex;
+}
+
+header {
+    margin-left: 10%;
+    width: fit-content;
+    padding-left: 16px;
+    background-color: var(--white-opacity-10);
+}
+
+header a {
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.white-60 {
+    color: white;
+    opacity: 0.6;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.bg-white-10 {
+    background-color: var(--white-opacity-10);
+}
+
+.hover {
+    transition: 250ms ease-out;
+}
+
+.hover:hover {
+    color: white;
+    opacity: 1;
+    transition: 250ms ease-in;
+}
+
+.vertical-list {
+    width: fit-content;
+    padding: 4px 12px;
+    background-color: var(--white-opacity-10);
+}
+
+.vertical-list li {
+    margin-right: 24px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.vertical-list li a {
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.vertical-list li:last-child {
+    margin-right: 0;
+}
+
+.what-you-can-do {
+    width: fit-content;
+    opacity: 0.6;
+    transition: 100ms ease-out;
+}
+
+.hidden-text {
+    display: none;
+}
+
+.what-you-can-do:hover {
+    display: block;
+    opacity: 1;
+    transition: 100ms ease-in;
+}
+
+.what-you-can-do:hover .hidden-text {
+    display: block;
+}
+
+.navigation-toggle {
+    display: none;
+}
+
+.custom-nav {
+    margin: 24px;
+}
+
+.content {
+    width: 80%;
+    margin: 36px auto;
+}
+
+.row-content {
+    padding: 36px;
+}
+
+.row-content a {
+    text-decoration: none;
+    padding: 0;
+    color: white;
+    transition: 100ms ease-out;
+}
+
+.row-content a:hover {
+    color: rgb(182, 182, 255);
+    transition: 100ms ease-in;
+}
+
+#treatment-details li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.fade-in-from-left {
+    animation:  appearing-animation 0s 500ms forwards,
+                fade-in-left-animation 750ms 500ms forwards;
+}
+
+.fade-in-from-right {
+    animation:  appearing-animation 0s 500ms forwards,
+                fade-in-right-animation 750ms 500ms forwards;
+}
+
+@keyframes appearing-animation {
+    to {
+        visibility: visible;
+    }
+}
+
+@keyframes fade-in-right-animation {
+    from {
+        opacity: 0;
+        transform: translateX(11%);
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade-in-left-animation {
+    from {
+        opacity: 0;
+        transform: translateX(-11%);
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
